@@ -5,37 +5,30 @@
     <title>Javascript Calculator</title>
   </head>
   <body>
-    <form name="Calculator">
       <marquee>"this is a test"</marquee>
       <center>
-      <table>
-        <tr>
-          <td><input type="button" name="one" value="1"></td>
-          <td><input type="button" name="two" value="2"></td>
-          <td><input type="button" name="three" value="3"></td>
-          <td><input type="button" name="divide" value="/"></td>
-        </tr>
-        <tr>
-          <td><input type="button" name="four" value="4" ></td>
-          <td><input type="button" name="five" value="5" ></td>
-          <td><input type="button" name="six" value="6" ></td>
-          <td><input type="button" name="multiply" value="*"></td>
-        </tr>
-        <tr>
-          <td><input type="button" name="seven" value="7" ></td>
-          <td><input type="button" name="eight" value="8" ></td>
-          <td><input type="button" name="nine" value="9" ></td>
-          <td><input type="button" name="subtract" value="-"></td>
-        </tr>
-        <tr>
-          <td><input type="button" name="zero" value="0" ></td>
-          <td><input type="button" name="decimal" value="." ></td>
-          <td><input type="button" name="equals" value="=" ></td>
-          <td><input type="button" name="add" value="+"></td>
-        </tr>
-      </table>
-      </center>
-    </form>
+        <div class="calculator">
+          <div class="calculator_display">0</div>
+
+          <div class="calculator__keys">
+            <button class="operator" data-action="add">+</button>
+            <button class="operator" data-action="subtract">-</button
+            <button class="operator" data-action="multiply">x</button>
+            <button class="operator" data-action="divide">÷</button
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>0</button>
+            <button data-action="decimal">.</button>
+            <button data-action="clear">AC</button>
+            <button class="equals" data-action="calculate">=</button>
+            </div>
 
   </body>
 </html>
