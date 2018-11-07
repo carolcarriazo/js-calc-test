@@ -1,37 +1,34 @@
 const calculator = document.querySelector('.calculator')
-const keys = document.querySelector('calculator_keys')
+const display = document.querySelector('.calculator_display')
+const keys = document.querySelector('.calculator_keys')
 
-keys.addEventListener('click', event=> {
-  if event.target.matches('button')) {
-    //dosomething
-  }
+keys.addEventListener('click', e => {
+  if (e.target.matches('button')) {
+    const key = event.target
+    const action = key.dataset.action
+    if (!action) {
+      console.log('number key!')
+    }
+
+    if (
+      action === 'add' ||
+      action === 'subtract' ||
+      action === 'multiply' ||
+      action === 'divide'
+    ) {
+      console.log('operator key!')
+    }
+
+    if (action === 'decimal') {
+      console.log('decimal key!')
+    }
+
+    if (action === 'clear') {
+      console.log('clear key!')
+    }
+
+    if (action === 'calculate') {
+      console.log('equal key!')
+    }
   }
 })
-
-const key = event.target
-const action = key.dataset.action
-
-if (!action) {
-  console.log('number key!')
-}
-
-if (
-  action === 'add' ||
-  action === 'subtract' ||
-  action === 'multiply' ||
-  action === 'divide'
-) {
-  console.log('operator key!')
-}
-
-if (action === 'decimal') {
-  console.log('decimal key!')
-}
-
-if (action === 'clear') {
-  console.log('clear key!')
-}
-
-if (action === 'calculate') {
-  console.log('equal key!')
-}
