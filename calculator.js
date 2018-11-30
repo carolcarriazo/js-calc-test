@@ -10,6 +10,10 @@ const calculate = (n1, operator, n2) => {
     result = parseFloat(n1) / parseFloat(n2)
   }
 
+  if (result === Infinity) {
+    result = "Not a number"
+   }
+
   return result
 }
 

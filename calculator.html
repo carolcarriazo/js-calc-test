@@ -5,8 +5,8 @@
     <title>Javascript Calculator</title>
   </head>
   <link rel="stylesheet" type="text/css" href="calculator.css">
-  <div class="container">
   <body>
+    <div class="container">
       <marquee>"this is a test"</marquee>
       <center>
         <div class="calculator">
@@ -31,8 +31,30 @@
             <button data-action="clear">AC</button>
             <button class="equals" data-action="calculate">=</button>
             </div>
+            <script src="calculator.js"></script>
+          </div>
+          <br>
+          <br>
+          <input type="text">
+      <!-- <button id="urlbutton1">Get URL-0</button> -->
+      <button class="urlbutton2">Get URL</button>
+
+    <!-- <script src="geturl.js"></script> -->
+    <script>
+      console.log('11111');
+
+      document.querySelector(".urlbutton2")
+      .addEventListener("click", waldo);
+
+    function waldo() {
+      console.log('waldo was here');
+      // if (e.target.matches("urlbutton1")) {
+      //   console.log('clicked button!');
+      // }
+    }
+    </script>
+
+
 
   </body>
-  </div>
 </html>
-<script src="calculator.js"></script>
