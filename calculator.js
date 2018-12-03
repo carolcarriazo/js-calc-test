@@ -44,6 +44,7 @@ keys.addEventListener('click', e => {
       }
       calculator.dataset.previousKeyType = 'number'
       console.log('number key!')
+      document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'number key!';
     }
 
     if (action === 'decimal') {
@@ -58,6 +59,7 @@ keys.addEventListener('click', e => {
 
       calculator.dataset.previousKeyType = 'decimal'
       console.log('decimal key!')
+      document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'decimal key!';
     }
 
     if (
@@ -87,6 +89,7 @@ keys.addEventListener('click', e => {
       calculator.dataset.previousKeyType = 'operator'
       calculator.dataset.operator = action
       console.log('operator key!')
+      document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'operator key!';
     }
 
     if (action === 'clear') {
@@ -102,6 +105,7 @@ keys.addEventListener('click', e => {
       display.textContent = 0
       calculator.dataset.previousKeyType = 'clear'
       console.log('clear key!')
+      document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'clear key!';
     }
 
     if (action !== 'clear') {
@@ -126,6 +130,7 @@ keys.addEventListener('click', e => {
       calculator.dataset.modValue = secondValue
       calculator.dataset.previousKeyType = 'calculate'
       console.log('equals key!')
+      document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'equals key!';
     }
   }
 })
