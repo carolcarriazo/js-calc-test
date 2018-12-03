@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="calculator.css">
   <body>
     <div class="container">
-      <marquee>"this is a test"</marquee>
       <center>
         <div class="calculator">
           <div class="calculator_display">0</div>
@@ -48,6 +47,7 @@
         urlbutton.addEventListener('click', waldo);
           function waldo() {
             console.log('waldo was here');
+            document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'Load URL clicked';
             $(document).ready(function(){
             $('#iframe').attr('src', document.getElementById('url').value);
             });
@@ -56,11 +56,26 @@
       </script>
 
     <iframe id="iframe" name="myIframe" frameborder="5" width="500" height="300"></iframe>
+    <br><input type="checkbox" id="checkbox", checked>Toggle debugger
+    <script>
+      const checkbox = document.getElementById('checkbox')
+      checkbox.addEventListener('change', toggle);
+        function toggle() {
+          var debugBox = document.getElementById('debug')
+          if (checkbox.checked) {
+            debugBox.style.display = "block";
+            console.log('debugger toggled on');
+            debugBox.value = debugBox.value + '\n' + 'debugger toggled on';
+          }
+          else {
+            debugBox.style.display = "none";
+            console.log('debugger toggled off');
+            debugBox.value = debugBox.value + '\n' + 'debugger toggled off';
+          }
+        }
+    </script>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <textarea rows="4" cols="50" id="debug">
+    </textarea>
   </body>
 </html>
