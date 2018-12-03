@@ -1,6 +1,6 @@
-/* const urlbutton = document.querySelector('.urlbutton')
-urlbutton.addEventListener('click', e => {
-  if (e.target.matches('.urlbutton')) {
-    console.log('clicked button!')
+const urlbutton = document.querySelector('.urlbutton')
+const url = document.querySelector('.url')
+urlbutton.addEventListener('click', waldo);
+  function waldo() {
+    console.log('waldo was here');
   }
-}) */
