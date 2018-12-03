@@ -46,7 +46,7 @@
         }
         urlbutton.addEventListener('click', waldo);
           function waldo() {
-            console.log('waldo was here');
+            console.log('Load URL clicked');
             document.getElementById('debug').value = document.getElementById('debug').value + '\n' + 'Load URL clicked';
             $(document).ready(function(){
             $('#iframe').attr('src', document.getElementById('url').value);
